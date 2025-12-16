@@ -1,46 +1,105 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>북스타그램 | 나만의 독서 기록 앱</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <main class="container">
-    <h1>📚 북스타그램</h1>
-    <p class="subtitle">책을 기록하는 가장 간단한 방법</p>
+/* ===== Reset & Base ===== */
+* {
+  box-sizing: border-box;
+}
 
-    <section>
-      <h2>앱 소개</h2>
-      <p>
-        북스타그램은 독서 기록을 쉽고 직관적으로 남길 수 있는 모바일 앱입니다.
-        읽은 책, 읽고 있는 책, 완독한 책을 정리하고
-        나만의 독서 로그를 차곡차곡 쌓아갈 수 있습니다.
-      </p>
-    </section>
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter,
+    Helvetica, Arial, sans-serif;
+  background: linear-gradient(180deg, #f9fafb 0%, #eef2f7 100%);
+  color: #1f2937;
+}
 
-    <section>
-      <h2>주요 기능</h2>
-      <ul>
-        <li>📖 책 검색 및 등록</li>
-        <li>✍️ 독서 기록 및 메모</li>
-        <li>✅ 읽는 중 / 완독 상태 관리</li>
-        <li>📊 나만의 독서 이력 관리</li>
-      </ul>
-    </section>
+/* ===== Layout ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 64px 24px 80px;
+}
 
-    <section>
-      <h2>개발 현황</h2>
-      <p>
-        현재 북스타그램은 개발 중인 앱으로,
-        Flutter 기반 모바일 앱과 NestJS 백엔드로 개발되고 있습니다.
-      </p>
-    </section>
+/* ===== Hero ===== */
+h1 {
+  font-size: 3rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
 
-    <footer>
-      <p>© 2025 Bookstagram</p>
-    </footer>
-  </main>
-</body>
-</html>
+.subtitle {
+  font-size: 1.25rem;
+  color: #4b5563;
+  margin-bottom: 40px;
+  max-width: 520px;
+}
+
+/* ===== Section Card ===== */
+section {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 32px 32px 36px;
+  margin-bottom: 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+/* ===== Text ===== */
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #374151;
+}
+
+/* ===== Feature List ===== */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  padding: 10px 0;
+}
+
+li::before {
+  content: "✓";
+  color: #3b82f6;
+  font-weight: 700;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  margin-top: 56px;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  section {
+    padding: 24px;
+  }
+}

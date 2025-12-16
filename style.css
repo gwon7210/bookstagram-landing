@@ -1,47 +1,105 @@
+/* ===== Reset & Base ===== */
+* {
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: #f9fafb;
-    color: #222;
-  }
-  
-  .container {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 48px 20px;
-  }
-  
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter,
+    Helvetica, Arial, sans-serif;
+  background: linear-gradient(180deg, #f9fafb 0%, #eef2f7 100%);
+  color: #1f2937;
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 64px 24px 80px;
+}
+
+/* ===== Hero ===== */
+h1 {
+  font-size: 3rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #4b5563;
+  margin-bottom: 40px;
+  max-width: 520px;
+}
+
+/* ===== Section Card ===== */
+section {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 32px 32px 36px;
+  margin-bottom: 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+/* ===== Text ===== */
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #374151;
+}
+
+/* ===== Feature List ===== */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  padding: 10px 0;
+}
+
+li::before {
+  content: "✓";
+  color: #3b82f6;
+  font-weight: 700;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  margin-top: 56px;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
   h1 {
-    font-size: 2.4rem;
-    margin-bottom: 8px;
+    font-size: 2.3rem;
   }
-  
+
   .subtitle {
     font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 32px;
   }
-  
+
   section {
-    margin-bottom: 32px;
+    padding: 24px;
   }
-  
-  h2 {
-    font-size: 1.3rem;
-    margin-bottom: 12px;
-  }
-  
-  ul {
-    padding-left: 20px;
-  }
-  
-  li {
-    margin-bottom: 8px;
-  }
-  
-  footer {
-    margin-top: 48px;
-    font-size: 0.85rem;
-    color: #777;
-  }
-  
+}
